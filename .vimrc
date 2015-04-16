@@ -15,6 +15,7 @@
         Plugin 'ervandew/supertab'
         Plugin 'bling/vim-airline'
         Plugin 'gosukiwi/vim-atom-dark'
+        Plugin 'chriskempson/base16-vim'
     call vundle#end()
     filetype plugin indent on
 
@@ -22,8 +23,11 @@
     if ! has("gui_running")
         set t_Co=256
     endif
-    colors atom-dark-256
-    let g:airline_theme='wombat'
+    "let base16colorspace=256 
+    set background=dark
+    colors base16-tomorrow
+    let g:airline_theme='base16'
+    let g:airline#extensions#tabline#enabled = 1
 
 " Changes tab size and uses spaces instead of tabs for easier formatting
     set tabstop=2     " Amount of spaces a tab takes up
