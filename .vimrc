@@ -24,10 +24,11 @@
         set t_Co=256
     endif
     "let base16colorspace=256 
-    set background=dark
-    colors base16-tomorrow
-    let g:airline_theme='base16'
+    colors atom-dark-256
+    let g:airline_theme='powerlineish'
     let g:airline#extensions#tabline#enabled = 1
+    let g:airline_powerline_fonts = 1
+    set noshowmode
 
 " Changes tab size and uses spaces instead of tabs for easier formatting
     set tabstop=2     " Amount of spaces a tab takes up
