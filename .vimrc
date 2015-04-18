@@ -1,10 +1,10 @@
 " basic formatting stuff
-    set number        " Turns on the line number bar on the left hand side.
-    set ruler         " Turns on the line/column count in bottom left
-    set hidden        " Does something with buffers. Better leave it.
-    syntax on         " Turns syntax on...
-    set nocompatible  " Gets rid of vi-like behavior. Makes vim do vim things
-    set laststatus=2  " Makes sure the status bar is always on. (Need for vim-airline to show)
+    set number            " Turns on the line number bar on the left hand side.
+    set ruler             " Turns on the line/column count in bottom left
+    set hidden            " Does something with buffers. Better leave it.
+    syntax on             " Turns syntax on...
+    set nocompatible      " Gets rid of vi-like behavior. Makes vim do vim things
+    set laststatus=2      " Makes sure the status bar is always on. (Need for vim-airline to show)
 
 " vundle directory map and plugin install
     filetype off
@@ -23,9 +23,23 @@
     if ! has("gui_running")
         set t_Co=256
     endif
-    "let base16colorspace=256 
-    colors atom-dark-256
-    let g:airline_theme='powerlineish'
+    " Atom Dark Color Scheme 
+    "colors atom-dark-256
+    "let g:airline_theme='ubaryd'
+    
+    " Current Dark Base-16 Color Scheme 
+    "set background=dark
+    "colors base16-railscasts
+    "let g:airline_theme='base16'
+    
+    " Solarized Base-16 Color Scheme
+    "set background=dark
+    set background=light
+    colors base16-solarized
+    let g:airline_theme='solarized'
+
+    " Settings that allow for vim-airline to do it's magic.
+    " These settings assume powerline-fonts are installed to work.
     let g:airline#extensions#tabline#enabled = 1
     let g:airline_powerline_fonts = 1
     set noshowmode
@@ -52,8 +66,8 @@
     " the mode
     map <C-c> <Esc>^
     " Should allow for easier movement between vsplits
-    map <C-Left> <C-W>h<C-W>_
-    map <C-Right> <C-W>l<C-W>_
+    "map <C-Left> <C-W>h<C-W>_
+    "map <C-Right> <C-W>l<C-W>_
     map <C-H> <C-W>h<C-W>_
     map <C-L> <C-W>l<C-W>_
     " Should delete the word around or before the cursor
