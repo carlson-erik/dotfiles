@@ -28,13 +28,12 @@
     "let g:airline_theme='ubaryd'
     
     " Current Dark Base-16 Color Scheme 
-    set background=dark
+    "set background=dark
     colors base16-twilight
     let g:airline_theme='base16'
     
     " Solarized Base-16 Color Scheme
     "set background=dark
-    "set background=light
     "colors base16-solarized
     "let g:airline_theme='solarized'
 
