@@ -38,13 +38,13 @@
 ;;(require 'solarized-dark-theme)
 
 ;; Turn on solarized-light
-;;(require 'solarized-light-theme)
+(require 'solarized-light-theme)
 
 ;; Turn on light theme
 ;;(require 'github-theme)
 
 ;; Turn on atom theme
-(require 'atom-dark-theme)
+;;(require 'atom-dark-theme)
 
 ;; Try bliss theme
 ;;(require 'bliss-theme)
