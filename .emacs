@@ -32,7 +32,7 @@
 ;;(require 'smyx-theme)
 
 ;; Turn on molokai-theme
-(require 'molokai-theme)
+;;(require 'molokai-theme)
 
 ;; Turn on solarized-dark
 ;;(require 'solarized-dark-theme)
@@ -44,26 +44,19 @@
 ;;(require 'github-theme)
 
 ;; Turn on atom theme
-;;(require 'atom-dark-theme)
+(require 'atom-dark-theme)
 
 ;; Try bliss theme
 ;;(require 'bliss-theme)
-
-;; Turn on ample flat theme
-;;(require 'ample-flat-theme)
 
 ;; Change default compilation command
 (setq compile-command "gcc -g -Wall -std=c99 -o run") 
 
 ;; Change default font
-(set-default-font "PragmataPro 11")
+(set-default-font "Inconsolata for powerline 11")
 
 ;; Empty scratch page
 (setq initial-scratch-message "")
-
-;; Powerline things
-(require 'powerline)
-;;(setq powerline-arrow-shape 'curve)
 
 ;; Changes the tabs into two spaces
 (setq-default indent-tabs-mode nil)
@@ -80,3 +73,8 @@
 ;; 80 column indicator as a global mode
 (define-globalized-minor-mode global-fci-mode fci-mode (lambda () (fci-mode 1)))
 (global-fci-mode 1)
+
+;; Highlight parenthesis in all modes
+(require 'highlight-parentheses)
+(define-globalized-minor-mode global-highlight-parentheses-mode highlight-parentheses-mode (lambda () (highlight-parentheses-mode 1)))
+(global-highlight-parentheses-mode 1)
