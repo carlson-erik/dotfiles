@@ -16,6 +16,7 @@
         Plugin 'bling/vim-airline'
         Plugin 'gosukiwi/vim-atom-dark'
         Plugin 'chriskempson/base16-vim'
+        Plugin 'endel/vim-github-colorscheme'
     call vundle#end()
     filetype plugin indent on
 
@@ -29,13 +30,19 @@
     
     " Current Dark Base-16 Color Scheme 
     "set background=dark
-    colors base16-twilight
-    let g:airline_theme='base16'
+    "set background=light
+    "colors base16-twilight
+    "let g:airline_theme='base16'
     
     " Solarized Base-16 Color Scheme
     "set background=dark
+    "set background=light
     "colors base16-solarized
     "let g:airline_theme='solarized'
+
+    " Github/extremely white color scheme
+    colors github
+    let g:airline_theme='sol'
 
     " Settings that allow for vim-airline to do it's magic.
     " These settings assume powerline-fonts are installed to work.
