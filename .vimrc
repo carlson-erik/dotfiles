@@ -14,9 +14,11 @@
         Plugin 'scrooloose/nerdtree'
         Plugin 'ervandew/supertab'
         Plugin 'bling/vim-airline'
-        Plugin 'gosukiwi/vim-atom-dark'
+        Plugin 'justinmk/vim-syntax-extra'
         Plugin 'chriskempson/base16-vim'
-        Plugin 'endel/vim-github-colorscheme'
+        Plugin 'tomasr/molokai'
+        Plugin 'NLKNguyen/papercolor-theme'
+        Plugin 'twerth/ir_black'
     call vundle#end()
     filetype plugin indent on
 
@@ -24,25 +26,21 @@
     if ! has("gui_running")
         set t_Co=256
     endif
-    " Atom Dark Color Scheme 
-    "colors atom-dark-256
-    "let g:airline_theme='ubaryd'
-    
-    " Current Dark Base-16 Color Scheme 
-    "set background=dark
+    " Re-used settings for theming
+    set background=dark
     "set background=light
-    "colors base16-twilight
-    "let g:airline_theme='base16'
     
     " Solarized Base-16 Color Scheme
-    "set background=dark
-    "set background=light
     "colors base16-solarized
     "let g:airline_theme='solarized'
 
-    " Github/extremely white color scheme
-    colors github
-    let g:airline_theme='sol'
+    " Paper Color Scheme
+    "colors PaperColor
+    "let g:airline_theme='papercolor'
+    
+    " IR_BLACK Color Scheme
+    colors ir_black
+    let g:airline_theme='ubaryd'
 
     " Settings that allow for vim-airline to do it's magic.
     " These settings assume powerline-fonts are installed to work.
@@ -82,7 +80,7 @@
 " Autoclose all brackets because all plugins suck
     " When { is pushed, it completes it, puts it on a new line,
     " and then puts you back inside of the bracket.
-    inoremap { {<CR>}<Esc>ko
+    "inoremap { {<CR>}<Esc>ko
     " When ( is pushed, it completes it, adds spaces and goes
     " to the middle of those spaces inside of the paren.
     inoremap ( ()<Left>
