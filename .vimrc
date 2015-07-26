@@ -1,10 +1,13 @@
 " basic formatting stuff
     set number            " Turns on the line number bar on the left hand side.
+    "set relativenumber    " Turns on the line numbering relative to the current line
     set ruler             " Turns on the line/column count in bottom left
     set hidden            " Does something with buffers. Better leave it.
     syntax on             " Turns syntax on...
     set nocompatible      " Gets rid of vi-like behavior. Makes vim do vim things
     set laststatus=2      " Makes sure the status bar is always on. (Need for vim-airline to show)
+    set cursorline        " Highlights the current line of the cursor.
+    set colorcolumn=80
 
 " vundle directory map and plugin install
     filetype off
@@ -16,9 +19,8 @@
         Plugin 'bling/vim-airline'
         Plugin 'justinmk/vim-syntax-extra'
         Plugin 'chriskempson/base16-vim'
-        Plugin 'tomasr/molokai'
-        Plugin 'NLKNguyen/papercolor-theme'
-        Plugin 'twerth/ir_black'
+        Plugin 'chriskempson/vim-tomorrow-theme'
+        Plugin 'nanotech/jellybeans.vim'
     call vundle#end()
     filetype plugin indent on
 
@@ -27,20 +29,21 @@
         set t_Co=256
     endif
     " Re-used settings for theming
-    set background=dark
+    "set background=dark
     "set background=light
     
     " Solarized Base-16 Color Scheme
     "colors base16-solarized
     "let g:airline_theme='solarized'
-
-    " Paper Color Scheme
-    "colors PaperColor
-    "let g:airline_theme='papercolor'
     
-    " IR_BLACK Color Scheme
-    colors ir_black
-    let g:airline_theme='ubaryd'
+    " Base16 Ocean Color Scheme
+    "let base16colorspace=256
+    "colors base16-ocean
+    "let g:airline_theme="base16"
+    
+    " JellyBeans Color Scheme
+    colors jellybeans
+    let g:airline_theme="base16"
 
     " Settings that allow for vim-airline to do it's magic.
     " These settings assume powerline-fonts are installed to work.
@@ -49,9 +52,9 @@
     set noshowmode
 
 " Changes tab size and uses spaces instead of tabs for easier formatting
-    set tabstop=2     " Amount of spaces a tab takes up
-    set softtabstop=2 " Amount of spaces a tab takes up
-    set shiftwidth=2  " Something to do with indentation. Corresponds to the tabstop
+    set tabstop=4     " Amount of spaces a tab takes up
+    set softtabstop=4 " Amount of spaces a tab takes up
+    set shiftwidth=4  " Something to do with indentation. Corresponds to the tabstop
     set expandtab     " Inserts spaces instead of tabs
     set smarttab      " Tabs to the last furthest tab
     set smartindent   " No idea but does something I like..?
