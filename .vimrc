@@ -18,9 +18,8 @@
         Plugin 'ervandew/supertab'
         Plugin 'bling/vim-airline'
         Plugin 'justinmk/vim-syntax-extra'
-        Plugin 'chriskempson/base16-vim'
-        Plugin 'chriskempson/vim-tomorrow-theme'
         Plugin 'nanotech/jellybeans.vim'
+        Plugin 'reedes/vim-colors-pencil'
     call vundle#end()
     filetype plugin indent on
 
@@ -28,22 +27,12 @@
     if ! has("gui_running")
         set t_Co=256
     endif
-    " Re-used settings for theming
-    "set background=dark
+
+    " Pencil Color Scheme
+    set background=dark
     "set background=light
-    
-    " Solarized Base-16 Color Scheme
-    "colors base16-solarized
-    "let g:airline_theme='solarized'
-    
-    " Base16 Ocean Color Scheme
-    "let base16colorspace=256
-    "colors base16-ocean
-    "let g:airline_theme="base16"
-    
-    " JellyBeans Color Scheme
-    colors jellybeans
-    let g:airline_theme="base16"
+    colors pencil
+    let g:airline_theme="pencil"
 
     " Settings that allow for vim-airline to do it's magic.
     " These settings assume powerline-fonts are installed to work.
@@ -91,5 +80,5 @@
     " of the brackets
     inoremap [ []<Left>
 
-" Allows for mouse usage inside of vim #noob
+" Allows for mouse usage inside of vim
     set mouse=a
