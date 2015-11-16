@@ -3,8 +3,7 @@
   (require 'package)
   (package-initialize)
   (add-to-list 'package-archives '("marmalade" . "https://marmalade-repo.org/packages/"))
-  (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
-  ;;(add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")
+  (add-to-list 'package-archives '("melpa" . "https://melpa.milkbox.net/packages/"))
   )
 
 ;; Start auto-complete and load default configs
@@ -28,33 +27,25 @@
 ;; Turn on line numbers
 (global-linum-mode)
 
-;; Turn on smyx-theme
-;;(require 'smyx-theme)
+;; Turn on ample flat theme
+(require 'ample-flat-theme)
 
-;; Turn on molokai-theme
-;;(require 'molokai-theme)
+;; Turn on ample theme
+;;(require 'ample-theme)
 
-;; Turn on solarized-dark
-;;(require 'solarized-dark-theme)
+;; Turn on leuven
+;;(require 'leuven-theme)
 
-;; Turn on solarized-light
-(require 'solarized-light-theme)
-
-;; Turn on light theme
-;;(require 'github-theme)
-
-;; Turn on atom theme
-;;(require 'atom-dark-theme)
-
-;; Try bliss theme
-;;(require 'bliss-theme)
+;; Turn on Zenburn theme
+;;(require 'zenburn-theme)
 
 ;; Change default compilation command
 (setq compile-command "gcc -g -Wall -std=c99 -o run") 
 
 ;; Change default font
-(set-default-font "Inconsolata for powerline 11")
-
+(set-default-font "Envy Code R 10")
+;;(set-default-font "Monaco 10")
+;;(set-default-font "Ubuntu Mono 12")
 ;; Empty scratch page
 (setq initial-scratch-message "")
 

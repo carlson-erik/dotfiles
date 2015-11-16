@@ -7,7 +7,9 @@
     set nocompatible      " Gets rid of vi-like behavior. Makes vim do vim things
     set laststatus=2      " Makes sure the status bar is always on. (Need for vim-airline to show)
     set cursorline        " Highlights the current line of the cursor.
-    set colorcolumn=80
+    set colorcolumn=80    " Shows a column at 80 characters 
+    set listchars=tab:>-,trail:~,extends:>,precedes:< " This shouws all weird hidden characters such as tab, and trail chars.
+    set list              " Shows the above setting
 
 " vundle directory map and plugin install
     filetype off
@@ -18,8 +20,9 @@
         Plugin 'ervandew/supertab'
         Plugin 'bling/vim-airline'
         Plugin 'justinmk/vim-syntax-extra'
-        Plugin 'nanotech/jellybeans.vim'
         Plugin 'reedes/vim-colors-pencil'
+        Plugin 'vim-scripts/wombat256.vim'
+        Plugin 'jnurmine/Zenburn'
     call vundle#end()
     filetype plugin indent on
 
@@ -29,10 +32,18 @@
     endif
 
     " Pencil Color Scheme
-    set background=dark
+    "set background=dark
     "set background=light
-    colors pencil
-    let g:airline_theme="pencil"
+    "colors pencil
+    "let g:airline_theme="pencil"
+
+    " Wombat Color Scheme
+    "colors wombat256
+    "let g:airline_theme="wombat"
+
+    " Zenburn Color Scheme
+    colors zenburn
+    let g:airline_theme="zenburn"
 
     " Settings that allow for vim-airline to do it's magic.
     " These settings assume powerline-fonts are installed to work.
@@ -40,6 +51,8 @@
     let g:airline_powerline_fonts = 1
     set noshowmode
 
+    " Change ExtraWhitespace to purple because I hate Red
+    highlight ExtraWhitespace ctermbg=60
 " Changes tab size and uses spaces instead of tabs for easier formatting
     set tabstop=4     " Amount of spaces a tab takes up
     set softtabstop=4 " Amount of spaces a tab takes up
