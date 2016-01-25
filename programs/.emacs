@@ -10,6 +10,7 @@
 (require 'auto-complete)
 (require 'auto-complete-config)
 (ac-config-default)
+(set 'ac-max-width 0.5)
 
 ;; Get autopair up and running
 (require 'autopair)
@@ -21,31 +22,21 @@
 ;; Hide things
 (setq inhibit-splash-screen t)
 (tool-bar-mode -1)
-;;(menu-bar-mode -1)
+(menu-bar-mode -1)
 (scroll-bar-mode -1)
 
 ;; Turn on line numbers
 (global-linum-mode)
 
-;; Turn on ample flat theme
-(require 'ample-flat-theme)
-
-;; Turn on ample theme
-;;(require 'ample-theme)
-
-;; Turn on leuven
-;;(require 'leuven-theme)
-
-;; Turn on Zenburn theme
-;;(require 'zenburn-theme)
+;; Turn on gruvbox theme
+(require 'gruvbox-theme)
 
 ;; Change default compilation command
 (setq compile-command "gcc -g -Wall -std=c99 -o run") 
 
 ;; Change default font
-(set-default-font "Envy Code R 10")
-;;(set-default-font "Monaco 10")
-;;(set-default-font "Ubuntu Mono 12")
+(set-default-font "Inconsolata\ for\ Powerline 9")
+
 ;; Empty scratch page
 (setq initial-scratch-message "")
 
@@ -69,3 +60,6 @@
 (require 'highlight-parentheses)
 (define-globalized-minor-mode global-highlight-parentheses-mode highlight-parentheses-mode (lambda () (highlight-parentheses-mode 1)))
 (global-highlight-parentheses-mode 1)
+
+;; Change the goto-line command 
+(global-set-key (kbd "C-g") 'goto-line)
