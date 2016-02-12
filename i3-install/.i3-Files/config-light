@@ -30,7 +30,7 @@ font pango: PragmataPro 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec urxvt
+bindsym $mod+Return exec xterm
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -38,7 +38,7 @@ bindsym $mod+Shift+q kill
 # start dmenu (a program launcher)
 #bindsym $mod+d exec dmenu_run
 # start rofi (a better program launcher)
-bindsym $mod+d exec rofi -show run -lines 3 -eh 2 -bw 0 -bc "#121212" -bg "#121212" -fg "#bbbbbb" -hlbg "#121212" -hlfg "#af87ff" -font "Inconsolata for Powerline 10"
+bindsym $mod+d exec rofi -show run -lines 3 -eh 2 -bw 0 -bc "#282828" -bg "#282828" -fg "#bbbbbb" -hlbg "#282828" -hlfg "#af87ff" -font "Inconsolata for Powerline 10"
 
 # change focus
 bindsym $mod+j focus left
@@ -131,12 +131,12 @@ bindsym $mod+r mode "resize"
 
 #======== MODIFIED STUFF HERE ========#
 font pango: Inconsolata\ for\ Powerline 10
-#class                         border   backgr.  text
-client.focused                 #1d1f21 #1d1f21 #c5c8c6
-client.focused_inactive        #1d1f21 #1d1f21 #c5c8c6
-client.unfocused               #1d1f21 #1d1f21 #c5c8c6
-client.urgent                  #1d1f21 #1d1f21 #c5c8c6
-client.background              #1d1f21
+#class                 		   border   backgr.  text
+client.focused                 #ffffff #ffffff #464b50
+client.focused_inactive		   #ffffff #ffffff #464b50
+client.unfocused          	   #ffffff #ffffff #464b50
+client.urgent                  #ffffff #ffffff #464b50
+client.background			   #ffffff
 
 new_window pixel 0
 #======== MODIFIED STUFF HERE ========#
@@ -144,23 +144,23 @@ new_window pixel 0
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        position top
-        mode dock
+		position top
+		mode dock
     font pango: PragmataPro 8
     workspace_buttons yes
     status_command ~/.i3/conky.sh
     colors {
-      background #1d1f21
-      statusline #1d1f21
-      focused_workspace    #1d1f21 #1d1f21 #94fa36
-      active_workspace     #1d1f21 #1d1f21 #94fa36
-      inactive_workspace   #1d1f21 #1d1f21 #c5c8c6
-      urgent_workspace     #1d1f21 #1d1f21 #c5c8c6
-      }
+      background #ffffff
+      statusline #ffffff
+	  focused_workspace    #464b50 #ffffff #464b50
+      active_workspace     #ffffff #ffffff #464b50
+      inactive_workspace   #ffffff #ffffff #464b50
+   	  urgent_workspace     #ffffff #ffffff #464b50
+	  }
 }
-
-#exec_always --no-stratup-id arandr /home/zed/.screenlayout/default-setup.sh
-exec_always --no-startup-id xrandr --output DisplayPort-1 --mode 2560x1440 --pos 1080x192 --rotate normal --output DisplayPort-0 --off --output DVI-0 --mode 1920x1080 --pos 0x0 --rotate left --output HDMI-0 --mode 1920x1080 --pos 3640x384 --rotate normal
-
+# This is the xrandr command for the Left Vertical Middle/Right Horizontal Setup
+#exec_always --no-startup-id xrandr --output DisplayPort-1 --mode 2560x1440 --pos 1080x192 --rotate normal --output DisplayPort-0 --off --output DVI-0 --mode 1920x1080 --pos 0x0 --rotate left --output HDMI-0 --mode 1920x1080 --pos 3640x384 --rotate normal
+# This is the xrandr command for the all Horizontal Setup
+exec_always --no-startup-id xrandr --output DisplayPort-1 --mode 2560x1440 --pos 1920x0 --rotate normal --output DisplayPort-0 --off --output DVI-0 --mode 1920x1080 --pos 0x192 --rotate normal --output HDMI-0 --mode 1920x1080 --pos 4480x264 --rotate normal
 exec_always --no-startup-id nitrogen --restore
 exec_always gnome-settings-daemon

@@ -11,8 +11,8 @@
 
 set $mod Mod1
 
-gaps inner 5
-gaps outer 5
+gaps inner 10
+gaps outer 10
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -152,8 +152,8 @@ bar {
     colors {
       background #282828
       statusline #282828
-      focused_workspace    #ebdbb2 #282828 #ebdbb2
-      active_workspace     #282828 #282828 #ebdbb2
+      focused_workspace    #282828 #282828 #b8bb26
+      active_workspace     #282828 #282828 #b8bb26
       inactive_workspace   #282828 #282828 #a89984
       urgent_workspace     #282828 #282828 #a89984
       }
@@ -164,4 +164,4 @@ bar {
 # This is the xrandr command for the all Horizontal Setup
 exec_always --no-startup-id xrandr --output DisplayPort-1 --mode 2560x1440 --pos 1920x0 --rotate normal --output DisplayPort-0 --off --output DVI-0 --mode 1920x1080 --pos 0x192 --rotate normal --output HDMI-0 --mode 1920x1080 --pos 4480x264 --rotate normal
 exec_always --no-startup-id nitrogen --restore
-#exec_always gnome-settings-daemon
+exec_always gnome-settings-daemon
