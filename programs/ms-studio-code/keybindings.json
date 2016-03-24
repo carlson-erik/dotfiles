@@ -1,0 +1,14 @@
+// Place your key bindings in this file to overwrite the defaults
+[
+    { "key": "ctrl+shift+p",                    "command": "workbench.action.showCommands" },
+    { "key": "ctrl+p",                          "command": "cursorUp",
+                                                "when": "editorTextFocus"},
+    { "key": "ctrl+n",                          "command": "cursorDown",
+                                                "when": "editorTextFocus"},
+    { "key": "ctrl+f",                          "command": "cursorRight",
+                                                "when": "editorTextFocus"},
+    { "key": "ctrl+b",                          "command": "cursorLeft",
+                                                "when": "editorTextFocus"},
+    {"key": "tab",                              "command": "tab",
+                                                "when": "editorTextFocus" }
+]
