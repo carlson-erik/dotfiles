@@ -25,6 +25,8 @@
         Plugin 'keith/swift.vim'
         Plugin 'morhetz/gruvbox'
         Plugin 'nanotech/jellybeans.vim'
+        Plugin 'joshdick/onedark.vim'
+        Plugin 'joshdick/airline-onedark.vim'
     call vundle#end()
     filetype plugin indent on
 
@@ -38,7 +40,11 @@
     " Gruvbox Color Scheme
     "colors gruvbox
     " Jellybeans Color Scheme
-    colors jellybeans
+    "colors jellybeans
+    " One Dark Color scheme
+    let g:onedark_termcolors = 16
+    colors onedark
+    let g:airline_theme='onedark'
     " Settings that allow for vim-airline to do it's magic.
     " These settings assume powerline-fonts are installed to work.
     let g:airline#extensions#tabline#enabled = 1
