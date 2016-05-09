@@ -5,7 +5,6 @@
     set hidden            " Does something with buffers. Better leave it.
     syntax on             " Turns syntax on...
     set nocompatible      " Gets rid of vi-like behavior. Makes vim do vim things
-    set laststatus=2      " Makes sure the status bar is always on. (Need for vim-airline to show)
     set cursorline        " Highlights the current line of the cursor.
     set colorcolumn=80    " Shows a column at 80 characters 
     set listchars=tab:>-,trail:~,extends:>,precedes:< " This shouws all weird hidden characters such as tab, and trail chars.
@@ -19,14 +18,12 @@
         Plugin 'gmarik/Vundle.vim'
         Plugin 'scrooloose/nerdtree'
         Plugin 'ervandew/supertab'
-        Plugin 'bling/vim-airline'
         Plugin 'justinmk/vim-syntax-extra'
         Plugin 'rust-lang/rust.vim'
         Plugin 'keith/swift.vim'
-        Plugin 'morhetz/gruvbox'
-        Plugin 'nanotech/jellybeans.vim'
-        Plugin 'joshdick/onedark.vim'
-        Plugin 'joshdick/airline-onedark.vim'
+        Plugin 'junegunn/seoul256.vim'
+        Plugin 'jacoborus/tender'
+        Plugin 'itchyny/lightline.vim'
     call vundle#end()
     filetype plugin indent on
 
@@ -37,19 +34,25 @@
     endif
     set background=dark
     "set background=light
-    " Gruvbox Color Scheme
-    "colors gruvbox
-    " Jellybeans Color Scheme
-    "colors jellybeans
-    " One Dark Color scheme
-    let g:onedark_termcolors = 16
-    colors onedark
-    let g:airline_theme='onedark'
-    " Settings that allow for vim-airline to do it's magic.
-    " These settings assume powerline-fonts are installed to work.
-    let g:airline#extensions#tabline#enabled = 1
-    let g:airline_powerline_fonts = 1
+
+    " Seoul256  Color Scheme
+    colors seoul256
+
+    " Tender Color Scheme
+    "colors tender
+
+"-------------------------- Lightline Configuration --------------------------
     set noshowmode
+    " Make sure that the status bar is always on to show Lightline
+    set laststatus=2
+    " Configure Lightline
+    let g:lightline = {
+          \ 'colorscheme': 'seoul256',
+          \ 'component': {
+          \   'readonly': '%{&readonly?"":""}',
+          \ },
+          \ }
+
 
 "------------------------------ Tab Indentation ------------------------------
     " Change ExtraWhitespace to purple because I hate Red
