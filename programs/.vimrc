@@ -21,9 +21,8 @@
         Plugin 'justinmk/vim-syntax-extra'
         Plugin 'rust-lang/rust.vim'
         Plugin 'keith/swift.vim'
-        Plugin 'junegunn/seoul256.vim'
-        Plugin 'jacoborus/tender'
         Plugin 'itchyny/lightline.vim'
+        Plugin 'morhetz/gruvbox'
     call vundle#end()
     filetype plugin indent on
 
@@ -35,11 +34,8 @@
     set background=dark
     "set background=light
 
-    " Seoul256  Color Scheme
-    colors seoul256
-
-    " Tender Color Scheme
-    "colors tender
+    " Gruvbox Color Scheme
+    colors gruvbox
 
 "-------------------------- Lightline Configuration --------------------------
     set noshowmode
