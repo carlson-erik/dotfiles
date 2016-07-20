@@ -33,7 +33,7 @@ bindsym $mod+Shift+q kill
 # start dmenu (a program launcher)
 #bindsym $mod+d exec dmenu_run
 # start rofi (a better program launcher)
-bindsym $mod+d exec rofi -show run -lines 3 -eh 2 -bw 0 -bc "#282828" -bg "#282828" -fg "#bbbbbb" -hlbg "#282828" -hlfg "#af87ff" -font "Inconsolata for Powerline 10"
+bindsym $mod+d exec rofi -show run -lines 3 -eh 2 -bw 0 -bc "#1d1f21" -bg "#1d1f21" -fg "#bbbbbb" -hlbg "#1d1f21" -hlfg "#b294bb" -font "Ubuntu Mono 10"
 
 # change focus
 bindsym $mod+j focus left
@@ -127,10 +127,10 @@ bindsym $mod+r mode "resize"
 #======== MODIFIED STUFF HERE ========#
 font pango: Inconsolata\ for\ Powerline 9
 #class                         border   backgr.  text
-client.focused                 #282828 #282828 #c5c8c6
-client.focused_inactive        #282828 #282828 #c5c8c6
-client.unfocused               #282828 #282828 #c5c8c6
-client.urgent                  #282828 #282828 #c5c8c6
+client.focused                 #282828 #282828 #b294bb
+client.focused_inactive        #282828 #282828 #b294bb
+client.unfocused               #282828 #282828 #b294bb
+client.urgent                  #282828 #282828 #b294bb
 client.background              #282828
 
 new_window pixel 0
@@ -146,11 +146,11 @@ bar {
     status_command i3blocks -c ~/.i3/i3blocks.conf
     colors {
       background #282828
-      statusline #c5c8c6
-      focused_workspace    #282828 #282828 #b5bd68
-      active_workspace     #282828 #282828 #b5bd68
-      inactive_workspace   #282828 #282828 #c5c8c6
-      urgent_workspace     #282828 #282828 #c5c8c6
+      statusline #b294bb
+      focused_workspace    #b294bb #282828 #b294bb
+      active_workspace     #282828 #282828 #b294bb
+      inactive_workspace   #282828 #282828 #b294bb
+      urgent_workspace     #282828 #282828 #b294bb
       }
 }
 
