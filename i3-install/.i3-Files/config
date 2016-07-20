@@ -11,14 +11,9 @@
 
 set $mod Mod1
 
-gaps inner 5
-gaps outer 5
+gaps inner 10
+gaps outer 10
 
-# Font for window titles. Will also be used by the bar unless a different font
-# is used in the bar {} block below.
-# This font is widely installed, provides lots of unicode glyphs, right-to-left
-# text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango: PragmataPro 8
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 # The font above is very space-efficient, that is, it looks good, sharp and
@@ -130,7 +125,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 #======== MODIFIED STUFF HERE ========#
-font pango: Inconsolata\ for\ Powerline 10
+font pango: Inconsolata\ for\ Powerline 9
 #class                         border   backgr.  text
 client.focused                 #282828 #282828 #c5c8c6
 client.focused_inactive        #282828 #282828 #c5c8c6
@@ -146,22 +141,19 @@ new_window pixel 0
 bar {
         position top
         mode dock
-    font pango: PragmataPro 8
+    font pango: Inconsolata\ for\ Powerline 9
     workspace_buttons yes
-    status_command ~/.i3/conky.sh
+    status_command i3blocks -c ~/.i3/i3blocks.conf
     colors {
       background #282828
-      statusline #282828
-      focused_workspace    #ebdbb2 #282828 #ebdbb2
-      active_workspace     #282828 #282828 #ebdbb2
-      inactive_workspace   #282828 #282828 #a89984
-      urgent_workspace     #282828 #282828 #a89984
+      statusline #c5c8c6
+      focused_workspace    #282828 #282828 #b5bd68
+      active_workspace     #282828 #282828 #b5bd68
+      inactive_workspace   #282828 #282828 #c5c8c6
+      urgent_workspace     #282828 #282828 #c5c8c6
       }
 }
 
-# This is the xrandr command for the Left Vertical Middle/Right Horizontal Setup
-#exec_always --no-startup-id xrandr --output DisplayPort-1 --mode 2560x1440 --pos 1080x192 --rotate normal --output DisplayPort-0 --off --output DVI-0 --mode 1920x1080 --pos 0x0 --rotate left --output HDMI-0 --mode 1920x1080 --pos 3640x384 --rotate normal
-# This is the xrandr command for the all Horizontal Setup
-exec_always --no-startup-id xrandr --output DisplayPort-1 --mode 2560x1440 --pos 1920x0 --rotate normal --output DisplayPort-0 --off --output DVI-0 --mode 1920x1080 --pos 0x192 --rotate normal --output HDMI-0 --mode 1920x1080 --pos 4480x264 --rotate normal
-exec_always --no-startup-id nitrogen --restore
+
+#exec_always --no-startup-id nitrogen --restore
 #exec_always gnome-settings-daemon

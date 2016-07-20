@@ -148,11 +148,11 @@ bar {
 		mode dock
     font pango: PragmataPro 8
     workspace_buttons yes
-    status_command ~/.i3/conky.sh
+    status_command i3blocks -c ~/.i3/i3blocks.conf
     colors {
       background #ffffff
-      statusline #ffffff
-	  focused_workspace    #464b50 #ffffff #464b50
+      statusline #464b50
+	    focused_workspace    #464b50 #ffffff #464b50
       active_workspace     #ffffff #ffffff #464b50
       inactive_workspace   #ffffff #ffffff #464b50
    	  urgent_workspace     #ffffff #ffffff #464b50
