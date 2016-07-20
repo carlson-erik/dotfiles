@@ -23,6 +23,7 @@
         Plugin 'keith/swift.vim'
         Plugin 'itchyny/lightline.vim'
         Plugin 'morhetz/gruvbox'
+        Plugin 'chriskempson/base16-vim'
     call vundle#end()
     filetype plugin indent on
 
@@ -35,7 +36,11 @@
     "set background=light
 
     " Gruvbox Color Scheme
-    colors gruvbox
+    "colors gruvbox
+
+    " Base 16 Tomorrow Theme
+    let base16colorspace=256
+    colors base16-tomorrow
 
 "-------------------------- Lightline Configuration --------------------------
     set noshowmode

@@ -127,10 +127,10 @@ bindsym $mod+r mode "resize"
 #======== MODIFIED STUFF HERE ========#
 font pango: Inconsolata\ for\ Powerline 9
 #class                         border   backgr.  text
-client.focused                 #282828 #282828 #b294bb
-client.focused_inactive        #282828 #282828 #b294bb
-client.unfocused               #282828 #282828 #b294bb
-client.urgent                  #282828 #282828 #b294bb
+client.focused                 #282828 #282828 #b5bd68
+client.focused_inactive        #282828 #282828 #b5bd68
+client.unfocused               #282828 #282828 #b5bd68
+client.urgent                  #282828 #282828 #b5bd68
 client.background              #282828
 
 new_window pixel 0
@@ -146,14 +146,14 @@ bar {
     status_command i3blocks -c ~/.i3/i3blocks.conf
     colors {
       background #282828
-      statusline #b294bb
-      focused_workspace    #b294bb #282828 #b294bb
-      active_workspace     #282828 #282828 #b294bb
-      inactive_workspace   #282828 #282828 #b294bb
-      urgent_workspace     #282828 #282828 #b294bb
+      statusline #b5bd68
+      focused_workspace    #b5bd68 #282828 #b5bd68
+      active_workspace     #282828 #282828 #b5bd68
+      inactive_workspace   #282828 #282828 #b5bd68
+      urgent_workspace     #282828 #282828 #b5bd68
       }
 }
 
 
-#exec_always --no-startup-id nitrogen --restore
+exec_always --no-startup-id nitrogen --restore
 #exec_always gnome-settings-daemon
