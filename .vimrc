@@ -16,14 +16,15 @@
     set rtp+=~/.vim/bundle/Vundle.vim
     call vundle#begin()
         Plugin 'gmarik/Vundle.vim'
+        Plugin 'itchyny/lightline.vim'
         Plugin 'scrooloose/nerdtree'
         Plugin 'ervandew/supertab'
         Plugin 'justinmk/vim-syntax-extra'
         Plugin 'rust-lang/rust.vim'
         Plugin 'keith/swift.vim'
-        Plugin 'itchyny/lightline.vim'
-        Plugin 'gosukiwi/vim-atom-dark'
         Plugin 'dylon/vim-antlr'
+        Plugin 'jiangmiao/auto-pairs'
+        Plugin 'gosukiwi/vim-atom-dark'
     call vundle#end()
     filetype plugin indent on
 
@@ -82,16 +83,6 @@
     map <C-L> <C-W>l<C-W>_
     " Should delete the word around or before the cursor
     imap <C-D> <C-[>diwi
-    " Autoclose all brackets because all plugins suck
-    " When { is pushed, it completes it, puts it on a new line,
-    " and then puts you back inside of the bracket.
-    "inoremap { {<CR>}<Esc>ko
-    " When ( is pushed, it completes it, adds spaces and goes
-    " to the middle of those spaces inside of the paren.
-    inoremap ( ()<Left>
-    " When [ is pushed, it completes it, and goes inside
-    " of the brackets
-    inoremap [ []<Left>
 
 "-------------------------------- Enable Mouse --------------------------------
 " Allows for mouse usage inside of vim
