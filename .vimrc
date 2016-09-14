@@ -6,7 +6,7 @@
     syntax on             " Turns syntax on...
     set nocompatible      " Gets rid of vi-like behavior. Makes vim do vim things
     set cursorline        " Highlights the current line of the cursor.
-    set colorcolumn=80    " Shows a column at 80 characters 
+    set colorcolumn=80    " Shows a column at 80 characters
     set listchars=tab:>-,trail:~,extends:>,precedes:< " This shouws all weird hidden characters such as tab, and trail chars.
     set list              " Shows the above setting
 
@@ -22,8 +22,8 @@
         Plugin 'rust-lang/rust.vim'
         Plugin 'keith/swift.vim'
         Plugin 'itchyny/lightline.vim'
-        Plugin 'morhetz/gruvbox'
-        Plugin 'chriskempson/base16-vim'
+        Plugin 'gosukiwi/vim-atom-dark'
+        Plugin 'dylon/vim-antlr'
     call vundle#end()
     filetype plugin indent on
 
@@ -35,12 +35,8 @@
     set background=dark
     "set background=light
 
-    " Gruvbox Color Scheme
-    "colors gruvbox
-
-    " Base 16 Tomorrow Theme
-    let base16colorspace=256
-    colors base16-tomorrow
+    " Atom Color Scheme
+    colors atom-dark-256
 
 "-------------------------- Lightline Configuration --------------------------
     set noshowmode
@@ -100,3 +96,7 @@
 "-------------------------------- Enable Mouse --------------------------------
 " Allows for mouse usage inside of vim
     set mouse=a
+
+"-------------------------------- Enable ANTLR --------------------------------
+    au BufRead,BufNewFile *.g set filetype=antlr3
+    au BufRead,BufNewFile *.g4 set filetype=antlr4
