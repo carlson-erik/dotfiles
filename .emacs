@@ -28,14 +28,20 @@
 ;; Turn on line numbers
 (global-linum-mode)
 
-;; Turn on gruvbox theme
-(require 'gruvbox-theme)
+;; Turn on ir-black Theme
+;;(require 'ir-black-theme)
+
+;; Turn on zenburn theme
+(require 'zenburn-theme)
+
+;; Turn on Sanityinc Tomorrow Night Theme
+;;(require 'sanityinc-tomorrow-night-theme)
 
 ;; Change default compilation command
 (setq compile-command "gcc -g -Wall -std=c99 -o run") 
 
 ;; Change default font
-(set-default-font "Inconsolata\ for\ Powerline 9")
+(set-default-font "Inconsolata 10")
 
 ;; Empty scratch page
 (setq initial-scratch-message "")
@@ -63,3 +69,7 @@
 
 ;; Change the goto-line command 
 (global-set-key (kbd "C-g") 'goto-line)
+
+;; Enable Neotree and set the default keybinding
+(require 'neotree)
+(global-set-key [f8] 'neotree-toggle)
