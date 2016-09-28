@@ -24,7 +24,8 @@
         Plugin 'keith/swift.vim'
         Plugin 'dylon/vim-antlr'
         Plugin 'jiangmiao/auto-pairs'
-        Plugin 'gosukiwi/vim-atom-dark'
+        Plugin 'twerth/ir_black'
+        Plugin 'jacoborus/tender.vim'
     call vundle#end()
     filetype plugin indent on
 
@@ -36,8 +37,11 @@
     set background=dark
     "set background=light
 
-    " Atom Color Scheme
-    colors atom-dark-256
+    " ir_black Color Scheme
+    "colors ir_black
+
+    " tender Color Scheme
+    colors tender
 
 "-------------------------- Lightline Configuration --------------------------
     set noshowmode
@@ -45,7 +49,7 @@
     set laststatus=2
     " Configure Lightline
     let g:lightline = {
-          \ 'colorscheme': 'seoul256',
+          \ 'colorscheme': 'tender',
           \ 'component': {
           \   'readonly': '%{&readonly?"":""}',
           \ },
