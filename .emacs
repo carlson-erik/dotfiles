@@ -22,26 +22,17 @@
 ;; Hide things
 (setq inhibit-splash-screen t)
 (tool-bar-mode -1)
-(menu-bar-mode -1)
+;;(menu-bar-mode -1)
 (scroll-bar-mode -1)
 
 ;; Turn on line numbers
 (global-linum-mode)
 
-;; Turn on ir-black Theme
-;;(require 'ir-black-theme)
-
-;; Turn on zenburn theme
-(require 'zenburn-theme)
-
-;; Turn on Sanityinc Tomorrow Night Theme
-;;(require 'sanityinc-tomorrow-night-theme)
-
 ;; Change default compilation command
 (setq compile-command "gcc -g -Wall -std=c99 -o run") 
 
 ;; Change default font
-(set-default-font "Inconsolata 10")
+(set-default-font "Oxygen Mono 12")
 
 ;; Empty scratch page
 (setq initial-scratch-message "")
@@ -73,3 +64,56 @@
 ;; Enable Neotree and set the default keybinding
 (require 'neotree)
 (global-set-key [f8] 'neotree-toggle)
+
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   (quote
+    (hl-line+ nlinum all-the-icons doom-themes neotree highlight-parentheses fill-column-indicator autopair auto-complete))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+
+;; All The Icons
+(require 'all-the-icons)
+
+;; nlinum and hl-line+
+(require 'nlinum)
+(require 'hl-line+)
+
+;; Doom Theme
+(require 'doom-themes)
+(load-theme 'doom-one t) ;; dark-one theme
+;;(load-theme 'doom-molokai t) ;; molokai theme
+
+;;; Settings (defaults)
+(setq doom-enable-bold t    ; if nil, bolding are universally disabled
+      doom-enable-italic t  ; if nil, italics are universally disabled
+
+      ;; doom-one specific settings
+      doom-one-brighter-modeline nil
+      doom-one-brighter-comments nil
+      )
+
+;;; OPTIONAL
+;; brighter source buffers (that represent files)
+(add-hook 'find-file-hook 'doom-buffer-mode-maybe)
+;; if you use auto-revert-mode
+(add-hook 'after-revert-hook 'doom-buffer-mode-maybe)
+;; you can brighten other buffers (unconditionally) with:
+(add-hook 'ediff-prepare-buffer-hook 'doom-buffer-mode)
+
+;; brighter minibuffer when active
+(add-hook 'minibuffer-setup-hook 'doom-brighten-minibuffer)
+
+;; Enable custom neotree theme
+(require 'doom-neotree)    ; all-the-icons fonts must be installed!
+
+;; Enable nlinum line highlighting
+(require 'doom-nlinum)     ; requires nlinum and hl-line-mode
