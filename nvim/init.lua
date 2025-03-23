@@ -1,3 +1,7 @@
+-- disable netrw at the very start of your init.lua
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
 -- Set <space> as the leader key. All usages of `leader` will be Space.
 --  NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
 vim.g.mapleader = " "
@@ -5,7 +9,7 @@ vim.g.maplocalleader = " "
 
 -- Lines numbers
 vim.opt.number = true
--- vim.opt.relativenumber = true
+vim.opt.relativenumber = true
 
 -- [[ Install `lazy.nvim` plugin manager ]]
 --    See `:help lazy.nvim.txt` or https://github.com/folke/lazy.nvim for more info
@@ -24,5 +28,10 @@ require("lazy").setup({
    -- Enables enabling/configuring plugins in separate files in the `lua/plugins/*.lua` directory.
    { import = "plugins" },
 })
+
+vim.cmd("set tabstop=4")
+vim.cmd("set shiftwidth=4")
+vim.cmd("set expandtab")
+
 
 
