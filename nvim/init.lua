@@ -9,7 +9,6 @@ vim.g.maplocalleader = " "
 
 -- Lines numbers
 vim.opt.number = true
-vim.opt.relativenumber = true
 
 -- [[ Install `lazy.nvim` plugin manager ]]
 --    See `:help lazy.nvim.txt` or https://github.com/folke/lazy.nvim for more info
@@ -29,6 +28,7 @@ require("lazy").setup({
    { import = "plugins" },
 })
 
+-- Fix tab width and use spaces
 vim.cmd("set tabstop=4")
 vim.cmd("set shiftwidth=4")
 vim.cmd("set expandtab")
