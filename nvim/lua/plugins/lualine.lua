@@ -6,6 +6,7 @@ return {
 			require("lualine").setup({
 				options = {
 					theme = "nightfox",
+					-- theme = "dayfox",
 				},
 			})
 		end,
