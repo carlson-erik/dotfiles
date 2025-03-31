@@ -24,8 +24,8 @@ vim.opt.rtp:prepend(lazypath)
 
 -- [[ Configure and install plugins ]]
 require("lazy").setup({
-   -- Enables enabling/configuring plugins in separate files in the `lua/plugins/*.lua` directory.
-   { import = "plugins" },
+	-- Enables enabling/configuring plugins in separate files in the `lua/plugins/*.lua` directory.
+	{ import = "plugins" },
 })
 
 -- Fix tab width and use spaces
@@ -33,5 +33,5 @@ vim.cmd("set tabstop=4")
 vim.cmd("set shiftwidth=4")
 vim.cmd("set expandtab")
 
-
-
+-- Show ruler at 80 column width
+vim.cmd("set colorcolumn=80")
