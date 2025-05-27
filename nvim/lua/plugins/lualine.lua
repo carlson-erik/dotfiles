@@ -7,6 +7,11 @@ return {
 				options = {
 					theme = "catppuccin",
 				},
+				sections = {
+					lualine_c = {
+						{ "filename", path = 1 }, -- path = 1: relative path, 2: absolute
+					},
+				},
 			})
 		end,
 	},

@@ -29,8 +29,8 @@ require("lazy").setup({
 })
 
 -- Fix tab width and use spaces
-vim.cmd("set tabstop=4")
-vim.cmd("set shiftwidth=4")
+vim.cmd("set tabstop=2")
+vim.cmd("set shiftwidth=2")
 vim.cmd("set expandtab")
 
 -- Show ruler at 80 column width
