@@ -7,14 +7,8 @@ return { -- You can easily change to a different colorscheme.
 	"catppuccin/nvim",
 	priority = 1000, -- Make sure to load this before all the other start plugins.
 	init = function()
-		-- Load the colorscheme here.
-		-- Like many other themes, this one has different styles, and you could load
-		-- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
-
-		-- LIGHT Mode
-		-- vim.cmd.colorscheme("catppuccin-latte")
-		-- DARK Mode
-		vim.cmd.colorscheme("catppuccin-frappe")
+		-- Catppuccin handles theme matching for us
+		vim.cmd.colorscheme("catppuccin")
 
 		-- You can configure highlights by doing something like:
 		vim.cmd.hi("Comment gui=none")
