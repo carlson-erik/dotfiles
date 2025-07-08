@@ -1,12 +1,18 @@
 #!/bin/bash
 
+# Install extensions if need be
 if [[ $1 == "--install" ]]; then
   echo "[SETUP] Installing Extensions"
-  ./install-ext.sh
+  ./extensions/install.sh
 fi
 
+# Configure all extensions I've installed
 echo "[SETUP] Configuring Extensions"
-./config-ext.sh
+./extensions/config.sh
 
-echo "[SETUP] Configuring Keybindings"
+# Configure gnome settings
+echo "[SETUP] Configuring Gnome Settings"
+./settings.sh
+
+echo "[SETUP] Configuring Gnome Keybindings"
 ./keybindings.sh
