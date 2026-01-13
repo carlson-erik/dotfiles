@@ -1,0 +1,306 @@
+/* Style for rendered Markdown */
+
+:root {
+	--ctp-latte-rosewater: #dc8a78;
+	--ctp-latte-flamingo: #dd7878;
+	--ctp-latte-pink: #ea76cb;
+	--ctp-latte-mauve: #8839ef;
+	--ctp-latte-red: #d20f39;
+	--ctp-latte-maroon: #e64553;
+	--ctp-latte-peach: #fe640b;
+	--ctp-latte-yellow: #df8e1d;
+	--ctp-latte-green: #40a02b;
+	--ctp-latte-teal: #179299;
+	--ctp-latte-sky: #04a5e5;
+	--ctp-latte-sapphire: #209fb5;
+	--ctp-latte-blue: #1e66f5;
+	--ctp-latte-lavender: #7287fd;
+	--ctp-latte-text: #4c4f69;
+	--ctp-latte-subtext1: #5c5f77;
+	--ctp-latte-subtext0: #6c6f85;
+	--ctp-latte-overlay2: #7c7f93;
+	--ctp-latte-overlay1: #8c8fa1;
+	--ctp-latte-overlay0: #9ca0b0;
+	--ctp-latte-surface2: #acb0be;
+	--ctp-latte-surface1: #bcc0cc;
+	--ctp-latte-surface0: #ccd0da;
+	--ctp-latte-base: #eff1f5;
+	--ctp-latte-mantle: #e6e9ef;
+	--ctp-latte-crust: #dce0e8;
+ --white: #D9E0EE;
+  --black: #000000;
+  --light: #C9CFFF;
+  --lighter-grey: #C3BAC6;
+  --light-grey: #988BA2;
+
+	--font-face: "Noto Sans", Arial, Helvetica, sans-serif;
+  --font-mono: "Roboto Mono", Courier, monospace;
+  --font-size: 13px;
+  --icon-size: 16px;
+
+  --regular: 400;
+  --bolder: 500;
+  --bolder: 600;
+
+  --scroll-radius: 3px;
+
+  --opacity-0-8: 0.8;
+}
+
+#rendered-md, body, th, td {
+  background-color: var(--ctp-latte-base) !important;
+  font-family: var(--font-face) !important;
+}
+
+p, ul, ol, li {
+  color: var(--ctp-latte-text) !important;
+}
+
+strong {
+  color: var(--ctp-latte-text) !important;
+}
+
+hr {
+  border: none;
+  border-bottom: 1px solid var(--ctp-latte-overlay1) !important;
+  margin: 2.5em 0 !important;
+}
+
+/* Scrollbars */
+::-webkit-scrollbar-thumb {
+  background-color: var(--ctp-latte-base) !important;
+  border-radius: var(--scroll-radius) !important;
+}
+
+/*********************************************************************************
+* TITLES
+*********************************************************************************/
+
+h1 {
+  color: var(--ctp-latte-text) !important;
+  border-bottom: 1px solid var(--ctp-latte-base) !important;
+  font-weight: var(--bolder) !important;
+}
+
+h2, h3, h4, h5, h6 {
+  color: var(--ctp-latte-subtext1) !important;
+  border-bottom: 0 !important;
+  font-weight: var(--bold) !important;
+}
+
+/*********************************************************************************
+* LINKS
+*********************************************************************************/
+
+a {
+  color: var(--ctp-latte-blue) !important;
+  text-decoration: underline !important;
+}
+
+a:hover {
+  text-decoration: underline !important;
+}
+
+/* Joplin icon in Joplin link */
+.resource-icon {
+  background-color: var(--ctp-latte-rosewater) !important;
+}
+
+/*********************************************************************************
+* CODE BLOCK
+*********************************************************************************/
+
+pre, .hljs {
+  background-color: var(--ctp-latte-mantle) !important;
+  font-family: var(--font-mono) !important;
+  padding: 10px !important;
+  color: var(--ctp-latte-text) !important;
+  font-size: 14px !important;
+  overflow: scroll !important;
+}
+
+/* Inline code */
+.inline-code {
+  background-color: transparent !important;
+  border: 0 !important;
+  font-family: var(--font-mono) !important;
+  color: var(--ctp-latte-blue) !important;
+  font-size: 14px !important;
+}
+pre, .hljs-params {
+	color: var(--ctp-latte-red) !important;
+}
+pre, .hljs-string {
+	color: var(--ctp-latte-blue	) !important;
+}
+pre, .hljs-built_in {
+	color: var(--ctp-latte-yellow) !important;
+}
+
+/*********************************************************************************
+* BLOCKQUOTE
+*********************************************************************************/
+
+blockquote {
+  background-color: var(--ctp-latte-surface0) !important;
+  padding: 10px !important;
+  color: var(--light) !important;
+  font-size: 14px !important;
+  font-style: italic !important;
+  border: 0 !important;
+  border-left: 5px solid var(--ctp-latte-mantle) !important;
+}
+
+/*********************************************************************************
+* TABLES
+*********************************************************************************/
+th {
+  border: 1px solid var(--ctp-latte-text) !important;
+  color: var(--ctp-latte-text) !important;
+  border-bottom: 1px solid var(--ctp-latte-text) !important;
+}
+
+td {
+  border: 1px solid var(--ctp-latte-text) important;
+  color: var(--ctp-latte-text) !important;
+  border-bottom: 1px solid var(--ctp-latte-text) !important;
+}
+
+/*********************************************************************************
+* HIGHLIGHTING
+*********************************************************************************/
+
+::selection {
+	background-color: var(--ctp-latte-lavender) !important;
+  color: var(--ctp-latte-crust) !important;
+}
+
+mark, mark strong {
+  background: var(--ctp-latte-yellow) !important;
+  color: var(--ctp-latte-crust) !important;
+}
+
+/* Highlighted searched item */
+mark[data-markjs] {
+  background-color: var(--ctp-latte-lavender) !important;
+}
+
+/*********************************************************************************
+* PLUGINS
+*********************************************************************************/
+
+/* SPOILERS (https://github.com/martinkorelic/joplin-plugin-spoilers) */
+
+/* Container for spoiler blocks */
+.spoiler-block {
+  border: 0 !important;
+  border-radius: 0px;
+}
+
+/* Container for spoiler title */
+#spoiler-block-title {
+  font-family: var(--font-face) !important;
+  color: var(--ctp-latte-text) !important;
+  background-color: var(--ctp-latte-mantle) !important;
+  border-radius: 0px;
+}
+
+/* Container for spoiler body */
+#spoiler-block-body {
+  font-family: var(--font-face) !important;
+  color: var(--light) !important;
+  background-color: var(--ctp-latte-mantle) !important;
+  border-radius: 0px;
+}
+
+/* Styling of the spoiler block body */
+.summary-content {
+  background-color: var(--ctp-latte-mantle) !important;
+}
+
+.summary-title:before {
+  color: var(--ctp-latte-lavender) !important;
+}
+
+/*********************************************************************************
+* PRINT VERSION
+*********************************************************************************/
+
+@media print {
+
+  #rendered-md, body, th, td {
+    /* background-color: var(--white) !important; */
+    background-color: #ffffff !important;
+    font-family: var(--font-face) !important;
+  }
+
+  p, ul, ol, li {
+    color: var(--black) !important;
+  }
+
+  strong {
+    color: var(--black) !important;
+  }
+
+  th {
+  border: 1px solid var(--black) !important;
+  color: var(--black) !important;
+  border-bottom: 1px solid var(--black) !important;
+  }
+
+  td {
+  border: 1px solid var(--black) !important;
+  color: var(--black) !important;
+  border-bottom: 1px solid var(--black) !important;
+  }
+
+  h1 {
+    border-bottom: 1px solid var(--black) !important;
+    font-weight: var(--bolder) !important;
+  }
+
+  h2, h3, h4, h5, h6 {
+    border-bottom: 0 !important;
+    font-weight: var(--bolder) !important;
+  }
+
+  hr {
+    border: none;
+    border-bottom: 1px solid var(--black) !important;
+    margin: 2.5em 0 !important;
+  }
+
+  a {
+    color: var(--ctp-latte-red) !important;
+    text-decoration: underline !important;
+  }
+
+/* Inline code */
+.inline-code {
+  background-color: #F8F8F8 !important;
+  border: 0 !important;
+  font-family: var(--font-mono) !important;
+  /* color: var(--ctp-latte-yellow) !important; */
+  font-size: 14px !important;
+}
+
+pre, .hljs {
+  background-color: #F8F8F8!important;
+  font-family: var(--font-mono) !important;
+  padding: 10px !important;
+  color: var(--ctp-latte-crust) !important;
+  font-size: 14px !important;
+  overflow: scroll !important;
+}
+
+blockquote {
+  background-color: #F8F8F8!important;
+  padding: 10px !important;
+  color: var(--ctp-latte-crust) !important;
+  font-size: 14px !important;
+  font-style: italic !important;
+  border: 0 !important;
+  border-left: 5px solid #E8E8E8 !important;
+}
+
+}
