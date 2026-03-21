@@ -1,0 +1,25 @@
+############ THEME ############
+# Light Theme
+theme = catppuccin-latte.conf
+# Dark Theme
+#theme = catppuccin-macchiato.conf
+
+############ Font ############
+font-family = "LiterationMono Nerd Font Mono"
+font-size = 14
+adjust-cell-height = 20%
+
+############ General ############
+# Cursor
+shell-integration-features = no-cursor
+cursor-style = block
+
+############ Keybindings ############
+# Better pane switching
+keybind = ctrl+tab=goto_split:next
+keybind = ctrl+shift+tab=goto_split:previous
+# Vim keybindings to switch between panes
+keybind = ctrl+h=goto_split:left
+keybind = ctrl+j=goto_split:bottom
+keybind = ctrl+k=goto_split:top
+keybind = ctrl+l=goto_split:right
