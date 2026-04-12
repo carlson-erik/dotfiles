@@ -179,6 +179,7 @@ return {
 			cssmodules_ls = {},
 			ast_grep = {},
 			eslint = {},
+			tailwindcss = {},
 			lua_ls = {
 				-- cmd = {...},
 				-- filetypes = { ...},
