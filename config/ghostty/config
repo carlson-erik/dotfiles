@@ -1,16 +1,18 @@
 ############ THEME ############
 # Light Theme
-theme = catppuccin-latte.conf
+#theme = catppuccin-latte.conf
+theme = monokai-pro-light.conf
 # Dark Theme
-#theme = catppuccin-macchiato.conf
-
-############ Default Keybindings ############
-config-file = ./keybindings/default_linux.conf
+#theme = catppuccin-mocha.conf
+#theme = monokai-pro-spectrum.conf
 
 ############ Font ############
-font-family = "LiterationMono Nerd Font Mono"
-font-size = 13
-adjust-cell-height = 20%
+# font-family = "LiterationMono Nerd Font Mono"
+#font-family = "SpaceMono Nerd Font Mono"
+#font-family = "Monaspace Argon NF"
+font-family = "Monaspace Neon NF"
+font-size = 14
+adjust-cell-height = 15%
 
 ############ General ############
 # Cursor
@@ -18,7 +20,12 @@ shell-integration-features = no-cursor
 cursor-style = block
 
 ############ Keybindings ############
-# Vim keybindings for easier between panes
+# Better pane switching
+keybind = ctrl+tab=goto_split:next
+keybind = ctrl+shift+tab=goto_split:previous
+# Better screen clearing
+keybind = ctrl+shift+l=clear_screen
+# Vim keybindings to switch between panes
 keybind = ctrl+h=goto_split:left
 keybind = ctrl+j=goto_split:bottom
 keybind = ctrl+k=goto_split:top
