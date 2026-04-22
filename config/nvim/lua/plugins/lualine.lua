@@ -5,7 +5,8 @@ return {
 		config = function()
 			require("lualine").setup({
 				options = {
-					theme = "catppuccin-nvim",
+					-- theme = "catppuccin-nvim",
+					theme = "monokai-pro",
 				},
 				sections = {
 					lualine_c = {
