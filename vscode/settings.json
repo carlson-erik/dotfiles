@@ -1,0 +1,127 @@
+{
+  "breadcrumbs.enabled": false,
+  "diffEditor.renderSideBySide": true,
+  "editor.fontFamily": "Monaspace Neon NF",
+  "editor.fontSize": 14,
+  "editor.lineHeight": 22,
+  "editor.fontWeight": "400",
+  "editor.fontVariations": false,
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "editor.rulers": [80],
+  "editor.minimap.enabled": false,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+  "editor.renderWhitespace": "none",
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    "**/node_modules": false,
+    "**/build": true,
+    "**/.cache": true,
+    "**/public": false,
+  },
+  "files.associations": {
+    "*.css": "tailwindcss",
+  },
+  "workbench.preferredDarkColorTheme": "Monokai Pro Light",
+  "workbench.preferredLightColorTheme": "Monokai Pro Light",
+  "workbench.colorTheme": "Monokai Pro Light",
+  "workbench.iconTheme": "Monokai Pro Light Icons",
+  "window.autoDetectColorScheme": true,
+  "redhat.telemetry.enabled": false,
+  "security.workspace.trust.untrustedFiles": "open",
+  "peacock.surpriseMeOnStartup": true,
+  "peacock.surpriseMeFromFavoritesOnly": true,
+  "peacock.showColorInStatusBar": false,
+  // Catppucin Colors
+  // "peacock.favoriteColors": [
+  //   {
+  //     "name": "Lavender (catppuccin)",
+  //     "value": "#7287fd",
+  //   },
+  //   {
+  //     "name": "Mauve (catppuccin)",
+  //     "value": "#8839ef",
+  //   },
+
+  //   {
+  //     "name": "Green (catppuccin)",
+  //     "value": "#40a02b",
+  //   },
+  //   {
+  //     "name": "Grey (catppuccin)",
+  //     "value": "#4c4f69",
+  //   },
+  // ],
+  // Monokai Pro Colors
+  "peacock.favoriteColors": [
+    {
+      "name": "Blue (Spectrum)",
+      "value": "#5ad4e6",
+    },
+    {
+      "name": "Blue (Light)",
+      "value": "#1c8ca8",
+    },
+    {
+      "name": "Green (Spectrum)",
+      "value": "#7bd88f",
+    },
+    {
+      "name": "Green (Light)",
+      "value": "#269d69",
+    },
+    {
+      "name": "Purple (Spectrum)",
+      "value": "#948ae3",
+    },
+    {
+      "name": "Purple (Light)",
+      "value": "#7058be",
+    },
+    {
+      "name": "Red (Spectrum)",
+      "value": "#fc618d",
+    },
+    {
+      "name": "Red (Light)",
+      "value": "#e14775",
+    },
+  ],
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  "[python]": {
+    "editor.formatOnType": true,
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  "joplin.token": "6352c7e03c780c3d40913eb4b96c58ab7b0cc8e5aa3b7b505a9a22e128edb7261b4cc4f3493d2eeeacb3cf5e3b9f4ce77471473554b874c2cb56be550d702417",
+}
+
