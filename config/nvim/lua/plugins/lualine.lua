@@ -6,7 +6,7 @@ return {
 			require("lualine").setup({
 				options = {
 					-- theme = "catppuccin-nvim",
-					theme = "monokai-pro",
+					theme = "everforest",
 				},
 				sections = {
 					lualine_c = {

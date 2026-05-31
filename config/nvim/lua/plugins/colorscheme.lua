@@ -4,16 +4,23 @@ return { -- You can easily change to a different colorscheme.
 	--
 	-- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
 	-- "catppuccin/nvim",
-	"loctvl842/monokai-pro.nvim",
+	"neanias/everforest-nvim",
 	lazy = false,
 	priority = 1000, -- Make sure to load this before all the other start plugins.
 	init = function()
-		-- Monokai Pro
-		require("monokai-pro").setup()
-		vim.cmd.colorscheme("monokai-pro")
-		-- Catppuccin handles theme matching for us
+		-- Catppuccin
 		-- require("catppuccin").setup()
 		-- vim.cmd.colorscheme("catppuccin")
+
+		-- Everforest
+		require("everforest").setup({
+			background = "medium",
+			transparent_background_level = 0,
+			italics = true,
+			disable_italic_comments = false,
+			inlay_hints_background = "dimmed",
+		})
+		vim.cmd.colorscheme("everforest")
 
 		-- You can configure highlights by doing something like:
 		vim.cmd.hi("Comment gui=none")
