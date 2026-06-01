@@ -122,6 +122,6 @@
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
-  "joplin.token": "6352c7e03c780c3d40913eb4b96c58ab7b0cc8e5aa3b7b505a9a22e128edb7261b4cc4f3493d2eeeacb3cf5e3b9f4ce77471473554b874c2cb56be550d702417",
+  "joplin.token": "",
 }
 
