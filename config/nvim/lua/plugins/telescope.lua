@@ -33,6 +33,11 @@ return { -- Fuzzy Finder (files, lsp, etc)
 				--show filename at the top of the preivew window
 				dynamic_preview_title = true,
 				mappings = {},
+				preview = {
+					treesitter = {
+						disable = { "lua" },
+					},
+				},
 			},
 			pickers = {
 				lsp_references = {
@@ -113,12 +118,12 @@ return { -- Fuzzy Finder (files, lsp, etc)
 
 		keymap("v", "<space>s", function()
 			local text = vim.getVisualSelection()
-			bt.current_buffer_fuzzy_find({ default_text = text })
+			tb.current_buffer_fuzzy_find({ default_text = text })
 		end, opts)
 
 		keymap("v", "<space>S", function()
 			local text = vim.getVisualSelection()
-			bt.grep_string({ search = text })
+			tb.grep_string({ search = text })
 		end, opts)
 	end,
 }

@@ -44,7 +44,7 @@ return {
 	},
 	{
 		"nvim-treesitter/nvim-treesitter-context",
-		enabled = false,
+		enabled = true,
 		config = function()
 			require("treesitter-context").setup({
 				context = {
