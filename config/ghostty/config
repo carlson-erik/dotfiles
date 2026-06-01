@@ -1,10 +1,8 @@
 ############ THEME ############
-# Light Theme
-#theme = catppuccin-latte.conf
-theme = monokai-pro-light.conf
-# Dark Theme
-#theme = catppuccin-mocha.conf
-#theme = monokai-pro-spectrum.conf
+# Catppuccin Theme
+#theme = "light:catppuccin-latte.conf,dark:catppuccin-mocha.conf"
+# EverforestTheme
+theme = "light:everforest-light-medium.conf,dark:everforest-dark-medium.conf"
 
 ############ Font ############
 # font-family = "LiterationMono Nerd Font Mono"
