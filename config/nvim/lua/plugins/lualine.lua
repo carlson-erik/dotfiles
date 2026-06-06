@@ -6,7 +6,11 @@ return {
 			require("lualine").setup({
 				options = {
 					-- theme = "catppuccin-nvim",
-					theme = "everforest",
+					-- theme = "everforest",
+					-- Use auto for "Tokyo Night"
+					theme = "auto",
+					component_separators = "",
+					section_separators = { left = "", right = "" },
 				},
 				sections = {
 					lualine_c = {
